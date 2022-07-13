@@ -18,15 +18,15 @@ import Loader from "./loader/loader";
 function App() {
   const [isLoading, setIsLoading] = React.useState(true);
 
-  const handleLoading = () => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 1400);
-  };
-  useEffect(() => {
-    window.addEventListener("load", handleLoading);
-    // return () => window.removeEventListener("load", handleLoading);
-  }, []);
+  // const handleLoading = () => {
+  //   setTimeout(() => {
+  //     setIsLoading(false);
+  //   }, 1400);
+  // };
+  // useEffect(() => {
+  //   window.addEventListener("load", handleLoading);
+  //   // return () => window.removeEventListener("load", handleLoading);
+  // }, []);
 
   const [colorChange, setColorchange] = useState(false);
   const changeNavbarColor = () => {
@@ -37,7 +37,23 @@ function App() {
     }
   };
   window.addEventListener("scroll", changeNavbarColor);
-  return !isLoading ? (
+  function fakeRequest() {
+    return new Promise((resolve) => setTimeout(() => resolve(), 2500));
+  }
+  useEffect(() => {
+    fakeRequest().then(() => {
+      const el = document.querySelector(".loading");
+      if (el) {
+        // el.remove();
+        setIsLoading(!isLoading);
+      }
+    });
+  }, [isLoading]);
+
+  if (isLoading) {
+    return <Loader />;
+  }
+  return (
     <div className="App">
       <BrowserRouter>
         <Navbar scrolled={colorChange}></Navbar>
@@ -72,8 +88,6 @@ function App() {
         <Footer></Footer>
       </BrowserRouter>
     </div>
-  ) : (
-    <Loader />
   );
 }
 
