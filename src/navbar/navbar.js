@@ -40,9 +40,9 @@ function Navbar(props) {
   };
   return (
     <div className={props.scrolled ? "navbar-active navbar" : "navbar"}>
-      <a className="navbar-logo" href="/">
+      <Link className="navbar-logo" to="/">
         <img src={logo} alt="Siddhivinayak Group of Companies Logo" />
-      </a>
+      </Link>
       <ul className={clicked ? "navbar-ul clicked" : "navbar-ul"}>
         <li>
           <Link className="nav-li" to="/" onClick={oncicknalink}>
