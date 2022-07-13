@@ -15,7 +15,7 @@ function Loader() {
           <div className="square square-six"></div>
         </div>
         <div className="logo-square">
-          <img src={Logo} />
+          <img src={Logo} alt="Siddhivinayak Group of Companies Logo" />
         </div>
       </div>
     </div>

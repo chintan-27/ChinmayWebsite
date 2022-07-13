@@ -226,6 +226,7 @@
   font-size: 3rem;
   color: var(--white);
 }
+
 .s1-left-half p{
   font-size: 1.5rem;
   font-weight: 500;
@@ -548,8 +549,13 @@
   }
 }
 @media (max-width:370px){
+  @media (max-width:330px){
+    .s1-left-half h1{
+      font-size: 0.9rem;
+    }
+  }
   .s1-left-half p{
-    font-size:0.8rem;
+    font-size:0.7rem;
   }
   .s1-contact-btn{
     padding: 10px 20px 10px 10px;
@@ -768,6 +774,18 @@
 .grid-item{
   width: 100%;
   padding: 20px;
+}
+@media (max-width:800px){
+  .grid-container{
+  grid-template-columns: auto auto;
+
+  }
+}
+@media (max-width:540px){
+  .grid-container{
+  grid-template-columns: auto;
+
+  }
 }
 
 .gi-comp p{
