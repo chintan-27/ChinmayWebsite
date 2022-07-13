@@ -223,7 +223,8 @@
   z-index: 100;
 }
 .s1-left-half h1{
-  font-size: 3rem;
+  font-size: 2.6rem;
+  font-weight: 600;
   color: var(--white);
 }
 

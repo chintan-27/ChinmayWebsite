@@ -1,10 +1,10 @@
 import React from "react";
 import "./../../App.css";
-import BrassPipes from "./../../images/Square Pipes.jpg";
+import BrassPipes from "./../../images/sq-brass.jpg";
 import { useSpring, animated } from "react-spring";
 import ContactUsBtn from "./../../webcomponents/contactUsbtn";
 
-function BrassPipesComponent() {
+function BrassSqPipesComponent() {
   const props = useSpring({
     to: { opacity: 1 },
     from: { opacity: 0 },
@@ -31,11 +31,12 @@ function BrassPipesComponent() {
   return (
     <div>
       <animated.div className="s1-left-half" style={props2}>
-        <h1>Manufacturer of Copper pipes upto 12 inch OD.</h1>
+        <h1>Manufacturer of Brass pipes in all shapes.</h1>
         <br />
         <animated.div style={props3}>
           <p>
-            Pipes of <b> all shapes SQUARE, TRIANGLE, CIRCLE, etc.</b>
+            Pipes of <b> all shapes SQUARE, TRIANGLE, CIRCLE, etc.</b> upto 12
+            inch OD
           </p>
         </animated.div>
         <br />
@@ -50,4 +51,4 @@ function BrassPipesComponent() {
   );
 }
 
-export default BrassPipesComponent;
+export default BrassSqPipesComponent;

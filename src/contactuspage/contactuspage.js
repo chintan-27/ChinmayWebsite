@@ -48,6 +48,13 @@ function ContactUsPage() {
             </p>
           </div>
           <div className="contact-container">
+            <h2>SIDDHIVINAYAK EXTRUSION PVT. LTD.</h2>
+            <p>
+              B/9, new sonal industrial estate, Saki vihar road, saki naka,
+              Andheri East, Mumbai
+            </p>
+          </div>
+          <div className="contact-container">
             <h2>Contact Info :</h2>
             <h3>Himmat Jain </h3>
             <h4>
@@ -71,13 +78,7 @@ function ContactUsPage() {
 
             <p>Jain.himmat@ymail.com</p>
           </div>
-          <div className="contact-container">
-            <h2>SIDDHIVINAYAK EXTRUSION PVT. LTD.</h2>
-            <p>
-              B/9, new sonal industrial estate, Saki vihar road, saki naka,
-              Andheri East, Mumbai
-            </p>
-          </div>
+
           <div className="contact-container">
             <h2>Contact Info :</h2>
             <h3>Chinmay Jain </h3>

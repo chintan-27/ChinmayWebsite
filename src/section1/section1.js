@@ -3,11 +3,9 @@ import "./../App.css";
 import BrassPipesComponent from "./components/brasspipes";
 import CopperPipesComponent from "./components/copperpipes";
 import CopperAnodesComponent from "./components/copperanodes";
+import BrassSqPipesComponent from "./components/brasssqpipes";
 
 class Section1 extends React.Component {
-  componentDidMount() {
-    document.title = "Siddhivinayak Group of Companies";
-  }
   constructor(props) {
     super(props);
     this.state = { index: 0 };
@@ -16,7 +14,7 @@ class Section1 extends React.Component {
   onrightclick = () => {
     let i = this.state.index;
     i++;
-    i %= 3;
+    i %= 4;
     this.setState({ index: i });
   };
 
@@ -26,7 +24,7 @@ class Section1 extends React.Component {
       i--;
       this.setState({ index: i });
     } else {
-      this.setState({ index: 2 });
+      this.setState({ index: 3 });
     }
   };
   componentDidMount() {
@@ -38,6 +36,8 @@ class Section1 extends React.Component {
       this.pipes = <BrassPipesComponent></BrassPipesComponent>;
     } else if (this.state.index === 0) {
       this.pipes = <CopperPipesComponent></CopperPipesComponent>;
+    } else if (this.state.index === 2) {
+      this.pipes = <BrassSqPipesComponent></BrassSqPipesComponent>;
     } else {
       this.pipes = <CopperAnodesComponent></CopperAnodesComponent>;
     }

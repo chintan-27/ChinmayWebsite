@@ -31,12 +31,12 @@ function CopperPipesComponent() {
   return (
     <div>
       <animated.div className="s1-left-half" style={props2}>
-        <h1>High Quality Copper Pipes Manufacturer in India</h1>
+        <h1>High Quality Copper And Brass Pipes Manufacturer in India</h1>
         <br />
         <animated.div style={props3}>
           <p>
-            SIDDHIVINAYAK Group of companies is India's leading Copper Pipes
-            Manufacturer
+            SIDDHIVINAYAK Group of companies is India's leading Copper and Brass
+            Pipes Manufacturer
           </p>
         </animated.div>
         <br />

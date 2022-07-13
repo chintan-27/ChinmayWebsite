@@ -7,37 +7,43 @@ import Data from "./../details.json";
 function Navbar(props) {
   const [clicked, setClicked] = useState(false);
   let dropdownitems = [];
-  for (var i in Object.keys(Data)) {
-    let key = Object.keys(Data)[i];
-    let innerlist = [];
-    dropdownitems.push(
-      <div key={key} className="dropdown-column">
-        <Link to={`/listproducts/${key}`} className="dropdown-link-head">
-          <h2>{key}</h2>
-        </Link>
-        {innerlist}
-      </div>
-    );
-    for (var j in Object.keys(Data[key])) {
-      let k = Object.keys(Data[key])[j];
-      innerlist.push(
-        <Link
-          key={k}
-          className="dropdown-link"
-          to={`/products/${key}/${k.replaceAll("/", "!")}`}
-        >
-          <ion-icon name="chevron-forward-outline"></ion-icon> {k}
-          <br />
-        </Link>
-      );
-    }
-  }
   const stateHandler = () => {
     setClicked(!clicked);
   };
   const oncicknalink = () => {
     setClicked(false);
   };
+  for (var i in Object.keys(Data)) {
+    let key = Object.keys(Data)[i];
+    let innerlist = [];
+    dropdownitems.push(
+      <div key={key} className="dropdown-column">
+        <a
+          href={`/listproducts/${key}`}
+          className="dropdown-link-head"
+          onClick={oncicknalink}
+        >
+          <h2>{key}</h2>
+        </a>
+        {innerlist}
+      </div>
+    );
+    for (var j in Object.keys(Data[key])) {
+      let k = Object.keys(Data[key])[j];
+      innerlist.push(
+        <a
+          key={k}
+          className="dropdown-link"
+          href={`/products/${key}/${k.replaceAll("/", "!")}`}
+          onClick={oncicknalink}
+        >
+          <ion-icon name="chevron-forward-outline"></ion-icon> {k}
+          <br />
+        </a>
+      );
+    }
+  }
+
   return (
     <div className={props.scrolled ? "navbar-active navbar" : "navbar"}>
       <Link className="navbar-logo" to="/">
