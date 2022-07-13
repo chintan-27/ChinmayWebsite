@@ -1,6 +1,6 @@
 import React from "react";
 import "./../App.css";
-import Logo from "./../images/logo.jpg";
+import Logo from "./../images/logo1.jpg";
 
 function Loader() {
   return (
