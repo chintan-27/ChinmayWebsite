@@ -23,7 +23,7 @@ function App() {
   };
   useEffect(() => {
     window.addEventListener("load", handleLoading);
-    return () => window.removeEventListener("load", handleLoading);
+    // return () => window.removeEventListener("load", handleLoading);
   }, []);
 
   const [colorChange, setColorchange] = useState(false);
