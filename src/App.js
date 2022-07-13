@@ -19,7 +19,9 @@ function App() {
   const [isLoading, setIsLoading] = React.useState(true);
 
   const handleLoading = () => {
-    setIsLoading(false);
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
   };
   useEffect(() => {
     window.addEventListener("load", handleLoading);
