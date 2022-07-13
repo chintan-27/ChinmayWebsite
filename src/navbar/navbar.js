@@ -12,23 +12,23 @@ function Navbar(props) {
     let innerlist = [];
     dropdownitems.push(
       <div key={key} className="dropdown-column">
-        <a href={`/listproducts/${key}`} className="dropdown-link-head">
+        <Link to={`/listproducts/${key}`} className="dropdown-link-head">
           <h2>{key}</h2>
-        </a>
+        </Link>
         {innerlist}
       </div>
     );
     for (var j in Object.keys(Data[key])) {
       let k = Object.keys(Data[key])[j];
       innerlist.push(
-        <a
+        <Link
           key={k}
           className="dropdown-link"
-          href={`/products/${key}/${k.replaceAll("/", "!")}`}
+          to={`/products/${key}/${k.replaceAll("/", "!")}`}
         >
           <ion-icon name="chevron-forward-outline"></ion-icon> {k}
           <br />
-        </a>
+        </Link>
       );
     }
   }

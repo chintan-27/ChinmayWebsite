@@ -18,7 +18,7 @@ function GridItem(props) {
     content = [];
     for (i in props.details.content) {
       content.push(
-        <div className="gi-details">
+        <div key={i} className="gi-details">
           <ion-icon style={{ color: "#05ce48" }} name="checkmark"></ion-icon>{" "}
           <b>{props.details.content[i][0]} : </b>
           {props.details.content[i][1]}
