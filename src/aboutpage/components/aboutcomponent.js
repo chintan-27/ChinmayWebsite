@@ -17,7 +17,9 @@ function AboutComponent(props) {
       <div style={{ display: "flex", justifyContent: "space-between" }}>
         <h1 className="about-comp-num">
           <Waypoint onEnter={() => setInview(true)}>
-            <animated.div>{number.to((n) => Math.floor(n))}</animated.div>
+            <animated.div>
+              {number.to((n) => Math.floor(n).toString() + "+")}
+            </animated.div>
           </Waypoint>
         </h1>
         <div className="about-comp-icon"> {props.icon}</div>

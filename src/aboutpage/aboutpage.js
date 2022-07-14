@@ -93,18 +93,18 @@ function AboutPage() {
       <br />
       <div className="about-row">
         <AboutComponent
-          head="Employees"
-          number={217}
-          icon={<ion-icon name="person"></ion-icon>}
+          head="Products"
+          number={50}
+          icon={<ion-icon name="shapes"></ion-icon>}
         />
         <AboutComponent
           head="Satisfied Customers"
-          number={244}
+          number={200}
           icon={<ion-icon name="thumbs-up"></ion-icon>}
         />
         <AboutComponent
           head="Projects Completed"
-          number={287}
+          number={350}
           icon={<ion-icon name="trophy"></ion-icon>}
         />
         <AboutComponent
