@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./../App.css";
-import logo from "./../images/logo.jpg";
+import logo from "./../images/logo/logo.jpg";
 import Data from "./../details.json";
 
 function Navbar(props) {

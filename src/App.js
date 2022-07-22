@@ -14,6 +14,7 @@ import ListProducts from "./productpage/listproducts";
 import AboutPage from "./aboutpage/aboutpage";
 import ContactUsPage from "./contactuspage/contactuspage";
 import Loader from "./loader/loader";
+import PhotosPage from "./photospage/photospage";
 
 function App() {
   const [isLoading, setIsLoading] = React.useState(true);
@@ -82,6 +83,7 @@ function App() {
               element={<ProductPage />}
             ></Route>
             <Route exact path="/about" element={<AboutPage />}></Route>
+            <Route exact path="/photos" element={<PhotosPage />}></Route>
             <Route exact path="/contact" element={<ContactUsPage />}></Route>
           </Routes>
         </div>
