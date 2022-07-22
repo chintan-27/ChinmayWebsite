@@ -66,6 +66,11 @@ function Navbar(props) {
           </Link>
         </li>
         <li>
+          <Link className="nav-li" to="/photos" onClick={oncicknalink}>
+            Photos
+          </Link>
+        </li>
+        <li>
           <div className="nav-li products-li" to="/products">
             Products <ion-icon name="caret-down-outline"></ion-icon>
             <div className="products-dropdown">{dropdownitems}</div>

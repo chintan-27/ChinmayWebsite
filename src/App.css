@@ -348,7 +348,7 @@
     display: block;
   }
 }
-@media (max-width:1025px){
+@media (max-width:1124px){
   .navbar-ul li{
     display: none;
   }
