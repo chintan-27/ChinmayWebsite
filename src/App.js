@@ -2,7 +2,7 @@ import "./App.css";
 import React, { useState, useEffect } from "react";
 import Section1 from "./section1/section1";
 import Section3 from "./section3/section3";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./navbar/navbar";
 import ProductPage from "./productpage/singleProduct";
 import Section4 from "./section4/section4";
@@ -55,7 +55,7 @@ function App() {
   }
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
         <Navbar scrolled={colorChange}></Navbar>
         <div>
           <Routes>
@@ -86,7 +86,7 @@ function App() {
           </Routes>
         </div>
         <Footer></Footer>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }

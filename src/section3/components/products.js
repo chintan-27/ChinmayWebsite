@@ -31,7 +31,6 @@ function Products(props) {
   }, [setSpaceBetween]);
 
   useEffect(() => {
-    console.log(window.screen.width);
     if (window.screen.width > 1125) {
       setSlidesPerView(4);
     } else if (window.screen.width <= 1125 && window.screen.width > 925) {

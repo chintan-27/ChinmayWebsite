@@ -32,33 +32,33 @@ function AboutPage() {
           <h5>● ● ● ● ●</h5>
           <br />
           <p>
-            We are a leading name in Copper & Copper Base Alloys Industry. We
-            have a successful history in manufacturing quality products for
-            India as well as international market. Our reputation is built on
-            their clients satisfaction and quality dedication.
+            We are a leading name in the copper and copper alloy industry. We
+            have a successful history in manufacturing quality products for the
+            Indian as well as the international market. Our reputation is built
+            on customer satisfaction and dedication to quality.
             <br />
             <br />
-            All of our copper and copper alloy products meet the applicable IS,
-            BS, DIN, ASTM, and JIS standards, as well as customer-specific
-            requirements. Our facility includes all of the essential machinery,
-            in-house testing labs, and testing facilities to guarantee that the
-            products fulfil electrical, mechanical, and chemical quality
-            requirements at every step of production.
+            All of our copper and copper alloy products comply with applicable
+            IS, BS, DIN, ASTM and JIS standards, as well as specific customer
+            requirements. Our facility includes all essential machinery,
+            in-house laboratories and testing facilities to ensure products meet
+            electrical, mechanical and chemical quality requirements at every
+            stage of production.
           </p>
           <br />
           <h3>Technology</h3>
           <br />
           <p>
-            The manufacturing process established by us uses the latest
-            technologies for all our production process creating high efficiency
-            in our working systems.We use the most advanced machines for all our
-            production processes & have all our systems with high quality
-            adherence. This constant updating in our machinery & process helps
-            us in manufacturing high quality products, reduction in wastage,
-            meeting environmental norms, increase productivity & produce tools
-            and terminals with zero error possibilities.We always strive hard to
-            satisfy all the needs of our customers & maintain accuracy in all
-            the products that we deliver.
+            The production process that we have established uses the latest
+            technologies for all of our production processes, creating high
+            efficiency in our working system. We use the most advanced machinery
+            for all of our production processes and have all our systems with
+            high-quality precision. Continuously updating our machines and
+            processes helps us produce high-quality products, reduce waste, meet
+            environmental standards, increase productivity and manufacture
+            products without any possibility of error. We always strive to meet
+            every customer's needs and maintain precision in all the products we
+            offer.
           </p>
         </div>
       </div>
@@ -67,25 +67,26 @@ function AboutPage() {
           <h3>Our Mission</h3>
           <br />
           <p>
-            Our mission is to go beyond every means to enhance the satisfaction
-            of every customer associated with our company.Our mission is to
-            provide consumers across the world with affordable, high-quality
-            products that meet international standards for copper, copper
-            alloys, and other brass pipes. We think that the metal industry will
-            prosper in the future because to its high-quality products.
+            Our mission is to constantly rise to improve the satisfaction of
+            every customer associated with our business. Our mission is to
+            provide consumers worldwide with affordable, high-quality products
+            that meet customers' standards for copper, copper alloys and brass
+            tubes. We believe the industry will thrive in the future with
+            high-quality products.
           </p>
         </div>
         <div className="column mission">
           <h3>Our Vision</h3>
           <p>
-            Our dream is to become an unconquerable leader in the global
-            automotive industry
+            Our dream is to be the invincible leader of the global Metal
+            industry
           </p>
           <br />
           <h3>Our Values</h3>
           <p>
-            We are a company that runs on values, which denotes our focus to win
-            market competition by indulging in right doings.
+            We are a scrupulous company that operates on values, which glorify
+            our goal to win the market competition by indulging in the right
+            doings.
           </p>
         </div>
       </div>

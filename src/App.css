@@ -398,7 +398,7 @@
     margin-right: 30px;
     display: block;
     color: var(--white);
-    border: 5px solid var(--white);
+    /* border: 5px solid var(--white); */
     border-radius: 5px;
     box-shadow: 2px 3px 4px #0003;
     background: none;
@@ -456,8 +456,8 @@
     top: 36px;
     margin-right: 0px;
     color: var(--white);
-    border: 2px solid var(--white);
-    border-radius: 5px;
+    /* border: 2px solid var(--white); */
+    border-radius: 2px;
     box-shadow: 2px 3px 4px #0003;
     background: none;
     transform: translateY(-20px) translateX(-30px);
