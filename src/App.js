@@ -1,13 +1,10 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
-import Section1 from "./section1/section1";
-import Section3 from "./section3/section3";
-import { HashRouter, Routes, Route } from "react-router-dom";
+
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Navbar from "./navbar/navbar";
 import ProductPage from "./productpage/singleProduct";
-import Section4 from "./section4/section4";
-import Section5 from "./section5/section5";
-import Section6 from "./section6/section6";
+
 import Footer from "./footer/footer";
 import AllProducts from "./productpage/allproducts";
 import ListProducts from "./productpage/listproducts";
@@ -15,6 +12,8 @@ import AboutPage from "./aboutpage/aboutpage";
 import ContactUsPage from "./contactuspage/contactuspage";
 import Loader from "./loader/loader";
 import PhotosPage from "./photospage/photospage";
+import Homepage from "./homepage/homepage";
+import NotFound from "./notfound/notfound";
 
 function App() {
   const [isLoading, setIsLoading] = React.useState(true);
@@ -56,23 +55,12 @@ function App() {
   }
   return (
     <div className="App">
-      <HashRouter>
+      <BrowserRouter>
         <Navbar scrolled={colorChange}></Navbar>
         <div>
           <Routes>
-            <Route
-              exact
-              path="/"
-              element={
-                <div>
-                  <Section1></Section1>
-                  <Section3></Section3>
-                  <Section4></Section4>
-                  <Section5></Section5>
-                  <Section6></Section6>
-                </div>
-              }
-            ></Route>
+            <Route path="*" element={<NotFound />} />
+            <Route exact path="/" element={<Homepage />}></Route>
             <Route exact path="/products" element={<AllProducts />}></Route>
             <Route
               path="/listproducts/:type"
@@ -88,7 +76,7 @@ function App() {
           </Routes>
         </div>
         <Footer></Footer>
-      </HashRouter>
+      </BrowserRouter>
     </div>
   );
 }
