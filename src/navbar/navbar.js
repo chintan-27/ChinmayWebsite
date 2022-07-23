@@ -6,6 +6,7 @@ import Data from "./../details.json";
 
 function Navbar(props) {
   const [clicked, setClicked] = useState(false);
+  const [c, setC] = useState(true);
   let dropdownitems = [];
   const stateHandler = () => {
     setClicked(!clicked);
@@ -13,15 +14,22 @@ function Navbar(props) {
   const oncicknalink = () => {
     setClicked(false);
   };
+  const onclicked = () => {
+    oncicknalink();
+    setC(false);
+    setTimeout(() => {
+      setC(true);
+    }, 10);
+  };
   for (var i in Object.keys(Data)) {
     let key = Object.keys(Data)[i];
     let innerlist = [];
     dropdownitems.push(
       <div key={key} className="dropdown-column">
         <a
-          href={`/listproducts/${key}`}
+          href={`#/listproducts/${key}`}
           className="dropdown-link-head"
-          onClick={oncicknalink}
+          onClick={onclicked}
         >
           <h2>{key}</h2>
         </a>
@@ -34,8 +42,8 @@ function Navbar(props) {
         <a
           key={k}
           className="dropdown-link"
-          href={`/products/${key}/${k.replaceAll("/", "!")}`}
-          onClick={oncicknalink}
+          href={`#/products/${key}/${k.replaceAll("/", "!")}`}
+          onClick={onclicked}
         >
           <ion-icon name="chevron-forward-outline"></ion-icon> {k}
           <br />
@@ -73,7 +81,12 @@ function Navbar(props) {
         <li>
           <div className="nav-li products-li" to="/products">
             Products <ion-icon name="caret-down-outline"></ion-icon>
-            <div className="products-dropdown">{dropdownitems}</div>
+            <div
+              className="products-dropdown"
+              style={c ? {} : { display: "none" }}
+            >
+              {dropdownitems}
+            </div>
           </div>
         </li>
         <li>

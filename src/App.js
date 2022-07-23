@@ -1,7 +1,7 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
 
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route, HashRouter } from "react-router-dom";
 import Navbar from "./navbar/navbar";
 import ProductPage from "./productpage/singleProduct";
 
@@ -55,7 +55,7 @@ function App() {
   }
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
         <Navbar scrolled={colorChange}></Navbar>
         <div>
           <Routes>
@@ -76,7 +76,7 @@ function App() {
           </Routes>
         </div>
         <Footer></Footer>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
