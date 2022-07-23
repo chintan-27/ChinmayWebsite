@@ -16,10 +16,10 @@ function ContactUsPage() {
     e.preventDefault();
     emailjs
       .sendForm(
-        "service_dptmfk7",
-        "template_fw18yts",
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
         e.target,
-        "_ZKMvgr4aHFpkTbiE"
+        process.env.REACT_APP_SECRET_KEY
       )
       .then(
         (result) => {
