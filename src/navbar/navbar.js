@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./../App.css";
 import logo from "./../images/logo/logo.jpg";
 import Data from "./../details.json";
+import swal from "sweetalert";
 
 function Navbar(props) {
   const [clicked, setClicked] = useState(false);
@@ -95,7 +96,18 @@ function Navbar(props) {
           </Link>
         </li>
         <li title="Download Catalogue">
-          <button className="navbar-btn" title="Download Catalogue">
+          <button
+            className="navbar-btn"
+            title="Download Catalogue"
+            onClick={() => {
+              swal({
+                title: "Coming Soon!",
+                text: "Catalogue Will be available soon",
+                icon: "info",
+                button: "Done",
+              });
+            }}
+          >
             CATALOGUE <ion-icon name="cloud-download"></ion-icon>
           </button>
         </li>
