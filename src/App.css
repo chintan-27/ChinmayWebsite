@@ -1556,7 +1556,7 @@
 }
 .contact-container p {
   display: inline-block;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   margin-left: 10px;
 }
 
@@ -1576,7 +1576,13 @@
     transform: translateY(3px);
   }
   .contact-container p {
-    margin-left: 5px;
+    margin-left: 2px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 385px) {
+  .contact-container p {
+    font-size: 10px;
   }
 }
 
