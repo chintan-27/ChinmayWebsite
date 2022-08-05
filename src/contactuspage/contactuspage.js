@@ -91,7 +91,13 @@ function ContactUsPage() {
               <ion-icon name="mail-outline"></ion-icon>
             </h4>
 
-            <p>Jain.himmat@ymail.com</p>
+            <p>himmat@siddhivinayakcopperpipes.com</p>
+            <br />
+            <h4>
+              <ion-icon name="mail-outline"></ion-icon>
+            </h4>
+
+            <p>info@siddhivinayakcopperpipes.com</p>
           </div>
 
           <div className="contact-container">
@@ -111,6 +117,11 @@ function ContactUsPage() {
               <ion-icon name="mail-outline"></ion-icon>
             </h4>
             <p>chinmay932jain@gmail.com</p>
+            <br />
+            <h4>
+              <ion-icon name="mail-outline"></ion-icon>
+            </h4>
+            <p>chinmay@siddhivinayakcopperpipes.com</p>
           </div>
         </div>
         <div className="column section6">
