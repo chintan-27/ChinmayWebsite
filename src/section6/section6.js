@@ -2,8 +2,13 @@ import React from "react";
 import CenterTitle from "../webcomponents/centerTitle";
 import "./../App.css";
 import emailjs from "emailjs-com";
+import swal from "sweetalert";
 
 class Section6 extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { loading: false };
+  }
   sendEmail(e) {
     e.preventDefault();
     emailjs
@@ -15,10 +20,24 @@ class Section6 extends React.Component {
       )
       .then(
         (result) => {
-          window.location.reload();
+          document.getElementById("create-course-form").reset();
+          swal({
+            title: "Success!",
+            text: "Message Sent Successfully!",
+            icon: "success",
+            button: "Done",
+          });
+          // window.location.reload();
         },
         (error) => {
           console.log(error.text);
+          document.getElementById("create-course-form").reset();
+          swal({
+            title: "Error!",
+            text: "Something went wrong",
+            icon: "error",
+            button: "Try Again",
+          });
         }
       );
   }
@@ -36,7 +55,14 @@ class Section6 extends React.Component {
         </p>
         <br />
         <br />
-        <form className="contact-form" onSubmit={this.sendEmail}>
+        <form
+          className="contact-form"
+          onSubmit={this.sendEmail}
+          id="create-course-form"
+          onReset={() => {
+            this.setState({ loading: false });
+          }}
+        >
           <input type="hidden" name="contact_number" />
           <input
             type="text"
@@ -56,7 +82,14 @@ class Section6 extends React.Component {
             placeholder="YOUR MESSAGE HERE ..."
             required
           />
-          <input type="submit" value="SEND" className="submit-btn" />
+          <input
+            type="submit"
+            value={this.state.loading ? "SENDING..." : "SEND"}
+            onClick={() => {
+              this.setState({ loading: true });
+            }}
+            className="submit-btn"
+          />
         </form>
         <br />
         <br />

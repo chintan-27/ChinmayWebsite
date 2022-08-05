@@ -1,7 +1,8 @@
-import { React, useEffect } from "react";
+import { React, useEffect, useState } from "react";
 import CenterTitle from "../webcomponents/centerTitle";
 import emailjs from "emailjs-com";
 import "./../App.css";
+import swal from "sweetalert";
 // import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
 
 function ContactUsPage() {
@@ -11,9 +12,10 @@ function ContactUsPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
+  const [loading, setLoading] = useState(false);
   const sendEmail = (e) => {
     e.preventDefault();
+    setLoading(true);
     emailjs
       .sendForm(
         process.env.REACT_APP_SERVICE_ID,
@@ -23,10 +25,23 @@ function ContactUsPage() {
       )
       .then(
         (result) => {
-          window.location.reload();
+          document.getElementById("create-course-form").reset();
+          swal({
+            title: "Success!",
+            text: "Message Sent Successfully!",
+            icon: "success",
+            button: "Done",
+          });
         },
         (error) => {
           console.log(error.text);
+          document.getElementById("create-course-form").reset();
+          swal({
+            title: "Error!",
+            text: "Something went wrong",
+            icon: "error",
+            button: "Try Again",
+          });
         }
       );
   };
@@ -109,7 +124,14 @@ function ContactUsPage() {
           </p>
           <br />
           <br />
-          <form className="contact-form" onSubmit={sendEmail}>
+          <form
+            className="contact-form"
+            onSubmit={sendEmail}
+            id="create-course-form"
+            onReset={() => {
+              setLoading(false);
+            }}
+          >
             <input type="hidden" name="contact_number" />
             <input
               type="text"
@@ -129,7 +151,11 @@ function ContactUsPage() {
               placeholder="YOUR MESSAGE HERE ..."
               required
             />
-            <input type="submit" value="SEND" className="submit-btn" />
+            <input
+              type="submit"
+              value={loading ? "SENDING..." : "SEND"}
+              className="submit-btn"
+            />
           </form>
           <br />
           <br />
