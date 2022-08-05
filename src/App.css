@@ -1580,11 +1580,6 @@
     font-size: 12px;
   }
 }
-@media (max-width: 385px) {
-  .contact-container p {
-    font-size: 10px;
-  }
-}
 
 /* ----------------LOADER---------------- */
 
