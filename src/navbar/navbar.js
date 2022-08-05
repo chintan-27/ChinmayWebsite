@@ -100,6 +100,7 @@ function Navbar(props) {
             className="navbar-btn"
             title="Download Catalogue"
             onClick={() => {
+              oncicknalink();
               swal({
                 title: "Coming Soon!",
                 text: "Catalogue Will be available soon",
