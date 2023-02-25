@@ -41,6 +41,12 @@ function BrassSqPipesComponent() {
         </animated.div>
         <br />
         <animated.div style={props4}>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
           <ContactUsBtn />
         </animated.div>
       </animated.div>

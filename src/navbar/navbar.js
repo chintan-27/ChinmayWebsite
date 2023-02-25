@@ -4,6 +4,7 @@ import "./../App.css";
 import logo from "./../images/logo/logo.jpg";
 import Data from "./../details.json";
 import swal from "sweetalert";
+// import { saveAs } from "file-saver";
 
 function Navbar(props) {
   const [clicked, setClicked] = useState(false);
@@ -14,6 +15,13 @@ function Navbar(props) {
   };
   const oncicknalink = () => {
     setClicked(false);
+  };
+  const onDownload = () => {
+    const link = document.createElement("a");
+    link.download = `Brochure.pdf`;
+    link.href = "./Brochure.pdf";
+    link.click();
+    // saveAs("Brochure.pdf", "Brochure.pdf");
   };
   const onclicked = () => {
     oncicknalink();
@@ -101,10 +109,11 @@ function Navbar(props) {
             title="Download Catalogue"
             onClick={() => {
               oncicknalink();
+              onDownload();
               swal({
-                title: "Coming Soon!",
-                text: "Catalogue Will be available soon",
-                icon: "info",
+                title: "Thank you",
+                text: "The catalogue has been downloaded.",
+                icon: "success",
                 button: "Done",
               });
             }}

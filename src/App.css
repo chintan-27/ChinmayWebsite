@@ -253,7 +253,7 @@
   padding-left: 7%;
   padding-right: 7%;
   top: 50%;
-  z-index: 10000;
+  z-index: 1000;
 }
 .s1-right-btn {
   float: right;
@@ -290,7 +290,7 @@
   /* border: 2px solid var(--copper); */
   box-shadow: 10px 12px 15px #0003;
   cursor: pointer;
-  transform: scale(1);
+
   transition: 500ms;
 }
 .s1-contact-btn ion-icon {
